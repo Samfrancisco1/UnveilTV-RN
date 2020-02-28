@@ -71,7 +71,7 @@ export default class Login extends Component{
                                     style={{ alignItems: 'center', borderRadius: 50, height: 40 }}
                                     start={{ x: 0, y: 1 }}
                                     end={{ x: 1, y: 1 }}>
-                            <TouchableOpacity  style={styles.login} >
+                            <TouchableOpacity onPress={() => this.props.navigation.navigate('Home')}  style={styles.login} >
                                 <Text style={{color: '#fff', textAlign: 'center'}}>SIGNIN</Text>
                             </TouchableOpacity >
                         </LinearGradient>

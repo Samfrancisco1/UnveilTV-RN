@@ -82,7 +82,7 @@ class RegisterScreen3 extends Component {
                                         }}
                                     start={{ x: 0, y: 1 }}
                                     end={{ x: 1, y: 1 }}>
-                            <TouchableOpacity onPress={() => this.props.navigation.navigate('RegisterScreen3')}  style={styles.continueBtn} >
+                            <TouchableOpacity onPress={() => this.props.navigation.navigate('Home')}  style={styles.continueBtn} >
                                 <Text style={{color: '#fff', textAlign: 'center'}}>FINALIZE PAYMENT</Text>
                             </TouchableOpacity >
                         </LinearGradient>
