@@ -11,7 +11,7 @@ class TVTab extends Component {
     render() {
         return (
         <View style={styles.container}>
-            <Toolbar props={ this.props } />
+            <Toolbar { ...this.props } />
             <Text> Live tv Screen </Text>
         </View>
         )

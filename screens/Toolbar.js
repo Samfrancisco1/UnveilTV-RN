@@ -8,17 +8,17 @@ class Toolbar extends Component {
     }
 
     render() {
-        const { props } = this.props;
+        const { navigation, route } = this.props;
         
         return (
             <View style={styles.header}>  
                 <View style={{backgroundColor: '#ff0000', flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-                    <TouchableOpacity onPress={ () => props.navigation.toggleDrawer() }>
+                    <TouchableOpacity onPress={ () => navigation.toggleDrawer() }>
                         <Ionicons name={'ios-menu'} size={30} color={'#fff'} />
                     </TouchableOpacity>
                 </View>
                 <View style={{backgroundColor: 'ff0000', flex: 5, color: '#fff',  justifyContent: 'center', alignContent: 'center'}}>
-                    <Text style={{fontSize: 20, color: '#fff', fontWeight: 'bold'}}>{ props.route.name }</Text>
+                    <Text style={{fontSize: 20, color: '#fff', fontWeight: 'bold'}}>{ route.name }</Text>
                 </View>
                 <View style={{backgroundColor: 'ff0000', flex: 1, alignItems: 'center'}}>
                     

@@ -10,7 +10,7 @@ class DocumentaryTab extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Toolbar props={ this.props } />
+        <Toolbar { ...this.props } />
         <Text> DocumentaryTab Screen </Text>
       </View>
     )

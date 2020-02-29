@@ -1,14 +1,21 @@
 import React, { Component } from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 
+import Toolbar from "../Toolbar" ;
+
 class Favourites extends Component {
-  render() {
-    return (
-      <View>
-        <Text> textInComponent </Text>
-      </View>
-    )
-  }
+    constructor(props){
+        super(props);
+        console.log(this.props);
+        
+    }
+    render() {
+        return (
+            <View>
+                <Toolbar props={ this.props } />
+            </View>
+        )
+    }
 }
 
 export default Favourites;
