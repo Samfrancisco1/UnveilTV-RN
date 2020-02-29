@@ -7,6 +7,7 @@ import TabScreen from './TabScreen';
 import Favourites from './drawerScreens/Favourites';
 import Watchlist from './drawerScreens/Watchlist';
 import Settings from './drawerScreens/Settings';
+import SideBar from './SideBar';
 
 function Logout({ navigation }) {
   return (
@@ -16,6 +17,7 @@ function Logout({ navigation }) {
   );
 }
 
+
 const Drawer = createDrawerNavigator();
 
 export default function DrawerScreen() {
@@ -23,17 +25,7 @@ export default function DrawerScreen() {
     
       <Drawer.Navigator 
       initialRouteName="Dashboard"
-      screenOptions={({ route }) => ({
-        drawerIcon: ({ focused, color, size }) => {
-          let iconName = 'ios-play';
-          return <Ionicons name={iconName} size={size} color={color} />;
-        },
-        
-      })}
-      drawerStyle={{
-        
-      }}
-      >
+      drawerContent={ props => <SideBar props={ props } /> } >
         <Drawer.Screen name="Dashboard" component={TabScreen} />
         <Drawer.Screen name="Favourites" component={Favourites} />
         <Drawer.Screen name="Watchlist" component={Watchlist} />
