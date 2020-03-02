@@ -20,8 +20,10 @@ class Toolbar extends Component {
                 <View style={{backgroundColor: 'ff0000', flex: 5, color: '#fff',  justifyContent: 'center', alignContent: 'center'}}>
                     <Text style={{fontSize: 20, color: '#fff', fontWeight: 'bold'}}>{ route.name }</Text>
                 </View>
-                <View style={{backgroundColor: 'ff0000', flex: 1, alignItems: 'center'}}>
-                    
+                <View style={{backgroundColor: 'ff0000', flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+                    <TouchableOpacity onPress={ () => navigation.toggleDrawer() }>
+                        <Ionicons name={'ios-search'} size={30} color={'#fff'} />
+                    </TouchableOpacity>
                 </View>
             </View>
         );
@@ -36,6 +38,6 @@ const styles = StyleSheet.create({
         height: 50,
         backgroundColor: '#ff0000',
         flexDirection: 'row',
-        marginTop: 24
+        marginTop: 24,
     }
 });

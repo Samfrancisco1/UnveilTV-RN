@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Text, View, StyleSheet } from 'react-native';
-import Toolbar from "../Toolbar" ;
+import Toolbar from "../../components/Toolbar" ;
 
 class Settings extends Component {
   render() {
